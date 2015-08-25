@@ -13,6 +13,7 @@
     "lodash": "^3.1.0",
     "phantom": "^0.7.2",
     "phantomjs2": "^2.0.0",
+    "prerender-plugin-memcached": "0.0.3",
     "tree-kill": "0.0.6"
   },
   "bin": {

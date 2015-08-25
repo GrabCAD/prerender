@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 var prerender = require('./lib');
+var prerenderMemcached = require('prerender-plugin-memcached');
+
+process.env.CACHE_TTL = process.env.CACHE_TTL || 0
 
 var server = prerender({
     workers: process.env.PHANTOM_CLUSTER_NUM_WORKERS,
@@ -8,13 +11,13 @@ var server = prerender({
     messageTimeout: process.env.PHANTOM_CLUSTER_MESSAGE_TIMEOUT
 });
 
-
 // server.use(prerender.basicAuth());
 // server.use(prerender.whitelist());
 server.use(prerender.blacklist());
 // server.use(prerender.logger());
 server.use(prerender.removeScriptTags());
 server.use(prerender.httpHeaders());
+server.use(prerenderMemcached);
 // server.use(prerender.inMemoryHtmlCache());
 // server.use(prerender.s3HtmlCache());
 
