@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 var prerender = require('./lib');
-var prerenderMemcached = require('prerender-plugin-memcached');
+var prerenderRedis = require('prerender-plugin-redis');
 
-process.env.CACHE_TTL = process.env.CACHE_TTL || 0
+process.env.PORT = process.env.PORT || 1337
 
 var server = prerender({
     workers: process.env.PHANTOM_CLUSTER_NUM_WORKERS,
@@ -17,7 +17,7 @@ server.use(prerender.blacklist());
 // server.use(prerender.logger());
 server.use(prerender.removeScriptTags());
 server.use(prerender.httpHeaders());
-server.use(prerenderMemcached);
+server.use(prerenderRedis);
 // server.use(prerender.inMemoryHtmlCache());
 // server.use(prerender.s3HtmlCache());
 
