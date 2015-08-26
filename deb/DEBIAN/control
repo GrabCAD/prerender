@@ -1,0 +1,10 @@
+Package: gc-npm-prerender-replaceme_version-replaceme_hash
+Section: apps
+Version: replaceme_version-replaceme_hash
+Architecture: amd64
+Maintainer: ci@grabcad.com
+Depends: npm
+Priority: extra
+Description: grabcad prerender
+Provides: gc-npm-prerender
+Replaces: gc-npm-prerender
