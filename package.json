@@ -13,7 +13,6 @@
     "lodash": "^3.1.0",
     "phantom": "^0.7.2",
     "phantomjs2": "^2.0.0",
-    "prerender-plugin-memcached": "0.0.3",
     "prerender-plugin-redis": "git+ssh://git@github.com/GrabCAD/prerender-plugin-redis.git#7420354330a2835bcee8c31c36484ad7ebcd4278",
     "tree-kill": "0.0.6"
   },
