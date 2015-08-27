@@ -13,8 +13,10 @@
     "lodash": "^3.1.0",
     "phantom": "^0.7.2",
     "phantomjs2": "^2.0.0",
-    "prerender-plugin-redis": "git+ssh://git@github.com/GrabCAD/prerender-plugin-redis.git",
     "tree-kill": "0.0.6"
+  },
+  "optionalDependencies": {
+    "prerender-plugin-redis": "git+ssh://git@github.com:GrabCAD/prerender-plugin-redis.git"
   },
   "bin": {
     "prerender": "server.js"
