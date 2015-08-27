@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 var prerender = require('./lib');
+process.env.PORT = process.env.PORT || 4000
 
 var server = prerender({
     workers: process.env.PHANTOM_CLUSTER_NUM_WORKERS,
