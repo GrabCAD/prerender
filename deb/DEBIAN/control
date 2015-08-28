@@ -1,4 +1,4 @@
-Package: gc-npm-prerender-replaceme_version-replaceme_hash
+Package: gc-npm-prerender
 Section: apps
 Version: replaceme_version-replaceme_hash
 Architecture: amd64
